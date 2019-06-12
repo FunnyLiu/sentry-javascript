@@ -48,6 +48,7 @@ let windowIntegrations = {};
 
 // This block is needed to add compatibility with the integrations packages when used with a CDN
 // tslint:disable: no-unsafe-any
+// Determine the current environment and get the current global variables
 const _window = getGlobalObject<Window>() as any;
 if (_window.Sentry && _window.Sentry.Integrations) {
   windowIntegrations = _window.Sentry.Integrations;
